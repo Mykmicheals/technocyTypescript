@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.banner-bg{
+    background-color: #D0E3ED;
+}
+
+.img{
+    width:4rem;
+    
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-6rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(6rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+
+@keyframes slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(-16rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+
+@keyframes slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(4rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+
+
+
+.animate-hero-h {
+    animation: slide-down 900ms ease-out forwards;
+}
+
+.animate-hero-p {
+    animation: slide-up 900ms ease-out forwards;
+}
+
+.a-l-img{
+   animation: slide-right 500ms ease-out forwards;
+
+}
+
+.sm-a{
+    animation: slide-left 1900ms ease-out forwards;
+}
