@@ -16,29 +16,29 @@ function Banner() {
         second:false,
         third:false
     })
-    // useEffect(() => {
-    //     console.log('good')
-    //     if(slider.first===true){
-    //          setTimeout(() => {
-    //      setSlider({
-    //          ['second']: true, ['first']: false, ['third']: false
-    //      })
-    //     }, 5000);
-    //     }else if(slider.second===true){
-    //                   setTimeout(() => {
-    //      setSlider({
-    //          ['second']: false, ['first']: false, ['third']: true
-    //      })
-    //     }, 5000)
-    //     } else {
-    //             setTimeout(() => {
-    //      setSlider({
-    //          ['second']: false, ['first']: true, ['third']: false
-    //      })
-    //     }, 5000);
-    // }
+    useEffect(() => {
+        console.log('good')
+        if(slider.first===true){
+             setTimeout(() => {
+         setSlider({
+             ['second']: true, ['first']: false, ['third']: false
+         })
+        }, 5000);
+        }else if(slider.second===true){
+                      setTimeout(() => {
+         setSlider({
+             ['second']: false, ['first']: false, ['third']: true
+         })
+        }, 5000)
+        } else {
+                setTimeout(() => {
+         setSlider({
+             ['second']: false, ['first']: true, ['third']: false
+         })
+        }, 5000);
+    }
        
-    // },[slider])
+    },[slider])
 
 
 
