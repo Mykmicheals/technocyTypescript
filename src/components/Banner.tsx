@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import bannerTv from '../../public/images/tv.png'
 import home2 from '../../public/images/home2.png'
 import home3 from '../../public/images/home3.png'
@@ -7,38 +7,37 @@ import home3 from '../../public/images/home3.png'
 import DoubleP from './DoubleP'
 import { iconDelivery, iconReturn, iconMoney, iconCall } from './Icons';
 
-var arrowLeft= 'absolute top-1/2 w-9 h-9 text-gray-300 left-10 bg-red-700 p-2 rounded-full'
-var arrowRight= 'absolute top-1/2 w-9 h-9 text-gray-300 right-12 bg-red-700 p-2 rounded-full'
+var arrowLeft = 'absolute top-1/2 w-9 h-9 text-gray-300 left-10 bg-red-700 p-2 rounded-full'
+var arrowRight = 'absolute top-1/2 w-9 h-9 text-gray-300 right-12 bg-red-700 p-2 rounded-full'
 
 function Banner() {
-    const[slider,setSlider] = useState({   
-        first:true,
-        second:false,
-        third:false
+    const [slider, setSlider] = useState({
+        first: true,
+        second: false,
+        third: false
     })
     useEffect(() => {
-        console.log('good')
-        if(slider.first===true){
-             setTimeout(() => {
-         setSlider({
-             ['second']: true, ['first']: false, ['third']: false
-         })
-        }, 5000);
-        }else if(slider.second===true){
-                      setTimeout(() => {
-         setSlider({
-             ['second']: false, ['first']: false, ['third']: true
-         })
-        }, 5000)
+        if (slider.first === true) {
+            setTimeout(() => {
+                setSlider({
+                    ['second']: true, ['first']: false, ['third']: false
+                })
+            }, 5000);
+        } else if (slider.second === true) {
+            setTimeout(() => {
+                setSlider({
+                    ['second']: false, ['first']: false, ['third']: true
+                })
+            }, 5000)
         } else {
-                setTimeout(() => {
-         setSlider({
-             ['second']: false, ['first']: true, ['third']: false
-         })
-        }, 5000);
-    }
-       
-    },[slider])
+            setTimeout(() => {
+                setSlider({
+                    ['second']: false, ['first']: true, ['third']: false
+                })
+            }, 5000);
+        }
+
+    }, [slider])
 
 
 
@@ -46,11 +45,11 @@ function Banner() {
     return (
         <div>
             <div>
-               {slider.first && <div className='relative banner-bg grid grid-cols-12 '>
-                 
-                        <Image  className='w-full h-auto a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={bannerTv} />
-                  
-                   
+                {slider.first && <div className='relative banner-bg grid grid-cols-12 '>
+
+                    <Image className='w-full h-auto a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={bannerTv} />
+
+
                     <div className=' my-20 lg:col-span-3 lg:block'>
                         {/* <div className='absolute right-1/6 top-24'> */}
                         <p className='sm-a font-mono'>Mid week deals</p>
@@ -60,7 +59,7 @@ function Banner() {
                     </div>
                 </div>}
 
-                            {slider.second && <div className='relative banner-bg grid grid-cols-12 '>
+                {slider.second && <div className='relative banner-bg grid grid-cols-12 '>
                     <Image className='a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={home2} />
                     <div className=' my-20 lg:col-span-3 lg:block'>
                         {/* <div className='absolute right-1/6 top-24'> */}
@@ -71,7 +70,7 @@ function Banner() {
                     </div>
                 </div>}
 
-                             {slider.third && <div className='relative banner-bg grid grid-cols-12 '>
+                {slider.third && <div className='relative banner-bg grid grid-cols-12 '>
                     <Image className='a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={home3} />
                     <div className=' my-20 lg:col-span-3 lg:block'>
                         {/* <div className='absolute right-1/6 top-24'> */}
@@ -85,7 +84,7 @@ function Banner() {
                     <p onClick={()=>setSlider({['third']:true})} className='bg-red-400 w-1/8 p-4'>Right</p> */}
 
             </div>
-           
+
 
 
 

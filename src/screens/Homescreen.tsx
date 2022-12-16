@@ -4,9 +4,14 @@ import Banner from '../components/Banner';
 import ShopSection from '../components/ShopSection';
 import Card4 from '../components/Card4';
 import Cart from '../components/Cart';
+import { useSelector } from 'react-redux';
 
 
 function Homescreen() {
+
+    // const products = useSelector((state) => state.products.products)
+
+
     return (
         <div className='relative'>
             <Header />
