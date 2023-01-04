@@ -1,14 +1,45 @@
 import React from "react";
+import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
 
-import { createSlice, configureStore } from "@reduxjs/toolkit";
 
-const initialCartState = {
+interface cartItemsType {
+    name: string,
+    price: string,
+    image: string,
+    qty: number,
+    id: string
+}
+
+
+interface productsOjbect {
+    name: string,
+    category: string,
+    brand: string,
+    description: string,
+    image: string,
+    slug: string,
+    price: string,
+    id: string
+    data:[]
+}
+
+interface cartType {
+    showCart: boolean,
+    cartItems: cartItemsType[],
+    totalAmount: number
+}
+
+const initialCartState: cartType = {
     showCart: false,
     cartItems: [],
     totalAmount: 0
 }
 
-const initProductsState = {
+interface productArray {
+    products: productsOjbect[]
+}
+
+const initProductsState: productArray = {
     products: []
 }
 
@@ -32,11 +63,10 @@ export const cartSlice = createSlice({
             } else {
                 existingItem.qty++
                 state.totalAmount += existingItem.qty * parseFloat(action.payload.price)
-
             }
 
         },
-        removeFromCart(state, action) {
+        removeFromCart(state, action: PayloadAction<string>) {
             var id = action.payload
             const existingItems = state.cartItems.find(item => item.id === id)
             if (existingItems.qty === 1) {
@@ -70,4 +100,11 @@ const store = configureStore({
 
 export const productActions = productsSlice.actions
 export const cartActions = cartSlice.actions
+
+type RootState = ReturnType<typeof store.getState>
+
+export const cartStore = (state: RootState) => state.cart
+export const productsStore = (state: RootState) => state.products.products
+
+
 export default store

@@ -40,17 +40,17 @@ function Banner() {
     }, [slider])
 
 
-
+    var imageClass = 'w-92 ml-4 my-8 h-76 a-l-img col-span-12 lg:col-span-7'
+    var sliderDiv = 'my-5 lg:my-20 col-span-12 text-center lg:col-span-3 lg:block'
+    var sliderOuter = 'relative banner-bg grid grid-cols-12 h-100'
 
     return (
         <div>
             <div>
-                {slider.first && <div className='relative banner-bg grid grid-cols-12 '>
+                {slider.first && <div className={sliderOuter}>
 
-                    <Image className='w-full h-auto a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={bannerTv} />
-
-
-                    <div className=' my-20 lg:col-span-3 lg:block'>
+                    <Image className={imageClass} alt='banner-tv' src={bannerTv} />
+                    <div className={sliderDiv}>
                         {/* <div className='absolute right-1/6 top-24'> */}
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>THE GOLD STANDARDS OF TELEVISION</h4>
@@ -59,9 +59,9 @@ function Banner() {
                     </div>
                 </div>}
 
-                {slider.second && <div className='relative banner-bg grid grid-cols-12 '>
-                    <Image className='a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={home2} />
-                    <div className=' my-20 lg:col-span-3 lg:block'>
+                {slider.second && <div className={sliderOuter}>
+                    <Image className={imageClass} alt='banner-tv' src={home2} />
+                    <div className={sliderDiv}>
                         {/* <div className='absolute right-1/6 top-24'> */}
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>YOUR FIRST STEP INTO SMART FITNESS</h4>
@@ -70,9 +70,9 @@ function Banner() {
                     </div>
                 </div>}
 
-                {slider.third && <div className='relative banner-bg grid grid-cols-12 '>
-                    <Image className='a-l-img col-span-9 lg:col-span-7' alt='banner-tv' src={home3} />
-                    <div className=' my-20 lg:col-span-3 lg:block'>
+                {slider.third && <div className={sliderOuter}>
+                    <Image className={imageClass} alt='banner-tv' src={home3} />
+                    <div className={sliderDiv}>
                         {/* <div className='absolute right-1/6 top-24'> */}
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>THE BEST MADE PHONES</h4>

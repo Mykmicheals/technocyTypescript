@@ -7,16 +7,18 @@ function Header() {
     return (
         <div>
             <div className='py-10 grid xl:grid grid-cols-6  border-b-2 border-gray-300'>
-                <div className='mx-20 flex gap-20 col-span-5'>
+                <div className='mx-20  md:flex gap-20 col-span-5'>
                     <Image alt='logo' src={logo} />
-                    <div className=''>
-                        <p>Send us a message</p>
-                        <p>support.technocy@example.com</p>
-                    </div>
-                    <div>
-                        <p>Need Help, call us</p>
-                        <p>+84 2500 888 33</p>
-                    </div>
+                    <div className='hidden md:visible flex gap-20'>
+                        <div className=''>
+                            <p>Send us a message</p>
+                            <p>support.technocy@example.com</p>
+                        </div>
+                        <div>
+                            <p>Need Help, call us</p>
+                            <p>+84 2500 888 33</p>
+                        </div>
+                   </div>
 
                 </div>
                 <div className='xl:flex gap-8 hidden'>
@@ -34,7 +36,10 @@ function Header() {
 
                 </div>
             </div>
-            <div onMouseLeave={() => setCat(false)} className='mx-20 py-5 gap-3 xl:gap-5 grid grid-cols-6 xl:grid-cols-8 relative'>
+
+
+
+            <div onMouseLeave={() => setCat(false)} className='hidden md:grid mx-20 py-5 gap-3 xl:gap-5 grid grid-cols-6 xl:grid-cols-8 relative'>
                 <p onMouseEnter={() => setCat(true)}  className='my-0 mr-5 col-span-2 text-md flex gap-5 text-white font-mono bg-red-500 px-5 py-3 rounded cursor-pointer'>SHOP BY CATEGORIES
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

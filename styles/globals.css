@@ -113,7 +113,16 @@
 
 .c-ov {
     animation: cart-slide 150ms ease-out forwards;
-    transform: translateX(-100%);
+   
+}
+
+.con{
+    /* transform: translateX(-100%); */
+}
+
+.menu_active{
+opacity: 1;
+transform: translate(0%, 0%);
 }
 
 .out{

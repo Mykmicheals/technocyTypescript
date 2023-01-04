@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/Card3.jsx"  ],
+, "src/components/Card3.jsx", "pages/detail/index.tsx"  ],
   "exclude": [
     "node_modules"
   ]

@@ -6,17 +6,24 @@ import Card2 from './Card2';
 import Card3 from './Card3';
 import ImageCard from './ImageCard';
 import SectionHead from './SectionHead';
-
 import { useSelector } from 'react-redux';
+import { productsStore } from '../store';
 
 function ShopSection() {
     const products = useSelector((state) => state.products.products.data)
+    const product = useSelector(productsStore)
+    // const products = product.products
     var featured = products?.slice(8, 12)
-    const phones = products?.filter((product) => product.category === 'Phones').slice(0, 4)
-    const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 4)
-    const tv = products?.filter((product) => product.category === 'Television').slice(0, 4)
+    const phones = products?.filter((product) => product.category === 'Phones').slice(0, 5)
+    const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 5)
+    const tv = products?.filter((product) => product.category === 'Television').slice(0, 5)
 
-    const find = featured?.find((each) => each.id === 10)
+    console.log(product.data)
+
+
+
+
+    var sectionClass = 'flex justify-center gap-1 mb-10 lg:mx-16'
 
     // console.log(find)
 
@@ -33,18 +40,21 @@ function ShopSection() {
                 <SectionHead
                     Heading='FEATURED PRODUCTS'
                 />
-                <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
+                <div className={sectionClass}>
 
 
 
                     {featured?.map((product) => {
                         return (
                             <Card4
+                                key={product.id}
                                 id={product.id}
                                 name={product.name}
                                 category={product.category}
                                 img={product.image}
                                 price={product.price}
+                                description={product.description}
+                                star={product.star}
                             />
                         )
                     })}
@@ -57,7 +67,7 @@ function ShopSection() {
                 <SectionHead
                     Heading='Phones'
                 />
-                <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
+                <div className={sectionClass}>
                     {phones?.map((product) => {
                         return (
                             <Card4
@@ -66,6 +76,8 @@ function ShopSection() {
                                 category={product.category}
                                 img={product.image}
                                 price={product.price}
+                                description={product.description}
+                                star={product.star}
                             />
                         )
                     })}
@@ -91,7 +103,7 @@ function ShopSection() {
                 <SectionHead
                     Heading='Laptops'
                 />
-                <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
+                <div className={sectionClass}>
                     {laptops?.map((product) => {
 
                         return (
@@ -101,6 +113,7 @@ function ShopSection() {
                                 category={product.category}
                                 img={product.image}
                                 price={product.price}
+                                description={product.description}
                             />
                         )
                     })}
@@ -115,7 +128,7 @@ function ShopSection() {
                 <SectionHead
                     Heading='Televisions'
                 />
-                <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
+                <div className={sectionClass}>
                     {tv?.map((product) => {
 
                         return (
@@ -125,6 +138,7 @@ function ShopSection() {
                                 category={product.category}
                                 img={product.image}
                                 price={product.price}
+                                description={product.description}
                             />
                         )
                     })}
