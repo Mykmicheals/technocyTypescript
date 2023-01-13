@@ -3,9 +3,11 @@ import React,{useState} from 'react'
 import logo from '../../public/images/logo.svg'
 
     function Header() {
-        const [showCat, setCat]= useState(false)
+        const [showCat, setCat] = useState(false)
+        const [menu, setMenu] = useState(false)
+        var listClass = 'hover:text-red-600 font-mono mb-12 text-xl'
         return (
-            <div>
+            <div className='relative'>
                 <div className='py-10 grid xl:grid grid-cols-6  border-b-2 border-gray-300'>
                     <div className='mx-20  md:flex gap-20 col-span-5'>
                         <Image alt='logo' src={logo} />
@@ -82,6 +84,27 @@ import logo from '../../public/images/logo.svg'
                     </div>}
 
                 </div>
+
+                <button onClick={()=>setMenu(true)} className="flex items-center p-1 text-gray-500 hover:text-gray-900 absolute top-8 left-2">
+                    <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                    </svg>
+                </button>
+
+
+                {/* {menu && <div className={`h-screen absolute bg-gray-500 z-10 top-0 fixed w-3/5 transition-all duration-300 ease-in-out transform ${menu ? 'translate-y-0' : 'translate-y-full'}`}>
+                    <ul className='mt-20 ml-4'>
+                        <li className={listClass}>Homepage</li>
+
+                    </ul>
+                </div>} */}
+
+                <div className={`menu-container hidden absolute top-0 left-0 h-screen bg-gray-500 z-10 w-3/5 transition-all duration-300 ease-in-out transform ${menu ? 'translate-x-0' : 'translate-x-full'}`}>
+                    <ul className='mt-20 ml-4'>
+                        <li className='list-class'>Homepage</li>
+                    </ul>
+                </div>
+
             </div>
         )
     }
