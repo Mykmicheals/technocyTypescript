@@ -9,6 +9,9 @@ import SectionHead from './SectionHead';
 import { useSelector } from 'react-redux';
 import { productsStore } from '../store';
 
+import iphone from '../../public/images/iphone13.jpg'
+import mcbook from '../../public/images/mcbook.jpg'
+
 function ShopSection() {
     const products = useSelector((state) => state?.products.products.data)
     const product = useSelector(productsStore)
@@ -30,31 +33,27 @@ function ShopSection() {
             {/* <div className='flex flex-wrap lg:mx-20 pt-10 py-5 grid grid-cols-2 lg:grid-cols-4 gap-2'> */}
             <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >
                 <DealCard />
-
-                
-                
-                {/* <Card4
-                    key={products[14]?.id}
-                    id={products[14]?.id}
-                    name={products[14]?.name}
-                    category={products[14]?.category}
-                    img={products[14]?.image}
-                    price={products[14]?.price}
-                    description={products[14]?.description}
-                    star={products[14]?.star}
-                />
+                <Card4
+                    key='762'
+                    id='762'
+                    name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
+                    category='Iphone'
+                    img={iphone}
+                    price='580,000'
+                    description='good products'
+                    star='5'
+                /> 
 
                 <Card4
-                    key={products[14]?.id}
-                    id={products[14]?.id}
-                    name={products[14]?.name}
-                    category={products[14]?.category}
-                    img={products[14]?.image}
-                    price={products[14]?.price}
-                    description={products[14]?.description}
-                    star={products[14]?.star}
-                /> */}
-                {/* <Card4 />  */}
+                    key='762'
+                    id='762'
+                    name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
+                    category='Iphone'
+                    img={iphone}
+                    price='580,000'
+                    description='good products'
+                    star='5'
+                /> 
 
             </div>
             <div>
