@@ -5,18 +5,29 @@ import Image from 'next/image'
 
 var serverHost = 'http://127.0.0.1:8000/'
 
+var listClass = 'mb-6 font-mono hover:text-red-500 cursor-pointer capitalize'
 function Index() {
     const router = useRouter()
     const detail = router.query
     return (
-       <div>
-            <Header />
+      
+           
             <div className='bg-gray-300 h-screen '>
             
             <div className='my-20 py-10 mx-20 flex gap-10'>
-
-                <div className='w-1/4 bg-white'>
-
+                   
+                    
+                <div className='w-1/4 bg-white px-10 pt-10'>
+                        <h2 className='font-bold mb-10 text-xl'>Product Categories</h2>
+                        <ul>
+                        
+                            <li className={listClass}>Computer gaming</li>
+                            <li className={listClass}>Laptops</li>
+                            <li className={listClass}>Mobiles</li>
+                            <li className={listClass}>Telivisions</li>
+                            <li className={listClass}>Uncategorised</li>
+                            <li className={listClass}>Tablets</li>
+                        </ul>
                 </div>
                 <div className='w-3/4 bg-white py-10 px-10 rounded-md'>
                         <h2 className='text-2xl font-bold w-3/4 font-mono'>{detail.name}</h2>
@@ -45,12 +56,17 @@ function Index() {
                                             
                         </div>
             
-                </div>
+                    </div>
+                    
+<div>
+
+</div>
+                
                   
             </div>
                    
         </div>
-       </div>
+      
     )
 }
 
