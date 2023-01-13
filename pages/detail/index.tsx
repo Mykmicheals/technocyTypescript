@@ -31,12 +31,12 @@ function Index() {
     return (
 
 
-        <div className='px-20 bg-gray-300 '>
+        <div className='px-4 lg:px-10 bg-gray-300 '>
 
-            <div className='my-20 pt-10  flex gap-10'>
+            <div className='my-20 pt-10  flex lg:gap-16'>
 
 
-                <div className='w-1/4 bg-white px-10 pt-10'>
+                <div className='w-1/4 bg-white px-10 pt-10 hidden lg:block'>
                     <h2 className='font-bold mb-10 text-xl'>Product Categories</h2>
                     <ul>
 
@@ -48,17 +48,17 @@ function Index() {
                         <li className={listClass}>Tablets</li>
                     </ul>
                 </div>
-                <div className='w-3/4 bg-white py-10 px-10 rounded-md'>
-                    <h2 className='text-2xl font-bold w-3/4 font-mono'>{detail?.name}</h2>
-                    <div className='flex gap-20 my-10'>
+                <div className='w-full shadow-lg lg:w-3/4 bg-white py-10 px-10 rounded-md mx-auto'>
+                    <h2 className='text-xl lg:text-2xl font-bold lg:w-3/4 mx-auto font-mono'>{detail?.name}</h2>
+                    <div className='grid lg:flex  lg:gap-20 my-10'>
 
-                        <div className='w-1/3'>
+                        <div className='lg:w-1/3'>
                             <Image width={300}
                                 height={300}
                                 src={`${serverHost}${detail.image}`} alt='products' />
                         </div>
 
-                        <div className='w-2/3 '>
+                        <div className='lg:w-2/3 '>
                             <p className='text-xl text-red-700 font-bold mb-8 '>N{detail?.price}</p>
                             <p className='font-mono tracking-wider'>{detail.description?.slice(0, 180)}.</p>
 
@@ -77,18 +77,18 @@ function Index() {
 
                 </div>
 
-                <div>
-
-                </div>
-
 
             </div>
 
+        
+        
+        
+        
             <div className='pb-12'>
                 <h3 className='text-3xl font-bold font-serif mb-8'>Related products</h3>
                
                 <div className={sectionClass}>
-                    {relatedProducts.map((product) => {
+                    {relatedProducts?.map((product) => {
                         return (
                             <Card4
                                 key={product.id}
