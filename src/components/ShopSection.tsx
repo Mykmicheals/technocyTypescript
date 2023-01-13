@@ -12,10 +12,16 @@ import { productsStore } from '../store';
 import iphone from '../../public/images/iphone13.jpg'
 import mcbook from '../../public/images/mcbook.jpg'
 
+interface productState {
+    products: {
+        products: {
+            data: any
+        }
+    }
+}
+
 function ShopSection() {
-    const products = useSelector((state) => state?.products.products.data)
-    const product = useSelector(productsStore)
-    // const products = product.products
+    const products: any = useSelector((state: productState) => state?.products.products.data)
     var featured = products?.slice(8, 13)
     const phones = products?.filter((product) => product.category === 'Phones').slice(0, 5)
     const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 5)
@@ -61,9 +67,6 @@ function ShopSection() {
                     Heading='FEATURED PRODUCTS'
                 />
                 <div className={sectionClass}>
-
-
-
                     {featured?.map((product) => {
                         return (
                             <Card4
