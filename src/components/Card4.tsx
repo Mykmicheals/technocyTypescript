@@ -30,7 +30,8 @@ function Card4({ img, category, name, price, id, description, star }) {
                         description: description,
                         name: name,
                         id: id,
-                        price: price
+                        price: price,
+                        category:category,
                     },
                 }}>
                 <div className='h-1/2'>
