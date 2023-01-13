@@ -10,30 +10,51 @@ import { useSelector } from 'react-redux';
 import { productsStore } from '../store';
 
 function ShopSection() {
-    const products = useSelector((state) => state.products.products.data)
+    const products = useSelector((state) => state?.products.products.data)
     const product = useSelector(productsStore)
     // const products = product.products
-    var featured = products?.slice(8, 12)
+    var featured = products?.slice(8, 13)
     const phones = products?.filter((product) => product.category === 'Phones').slice(0, 5)
     const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 5)
     const tv = products?.filter((product) => product.category === 'Television').slice(0, 5)
 
-    console.log(product.data)
 
 
+  //  var sectionClass = 'flex justify-center gap-1 mb-10 lg:mx-8'
+    var sectionClass = 'grid mx-4 md:mx-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2'
 
-
-    var sectionClass = 'flex justify-center gap-1 mb-10 lg:mx-16'
-
-    // console.log(find)
+    
 
     return (
         <div className='bg-gray-100 '>
             {/* <div className='flex flex-wrap lg:mx-20 pt-10 py-5 grid grid-cols-2 lg:grid-cols-4 gap-2'> */}
             <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >
                 <DealCard />
-                {/* <Card4 />
-                <Card4 /> */}
+
+                
+                
+                {/* <Card4
+                    key={products[14]?.id}
+                    id={products[14]?.id}
+                    name={products[14]?.name}
+                    category={products[14]?.category}
+                    img={products[14]?.image}
+                    price={products[14]?.price}
+                    description={products[14]?.description}
+                    star={products[14]?.star}
+                />
+
+                <Card4
+                    key={products[14]?.id}
+                    id={products[14]?.id}
+                    name={products[14]?.name}
+                    category={products[14]?.category}
+                    img={products[14]?.image}
+                    price={products[14]?.price}
+                    description={products[14]?.description}
+                    star={products[14]?.star}
+                /> */}
+                {/* <Card4 />  */}
 
             </div>
             <div>
@@ -88,15 +109,15 @@ function ShopSection() {
                 <SectionHead
                     Heading='NEW ARRIVALS'
                 />
-                <div className='mx-20  gap-5 grid grid-cols-3'>
+                <div className="mx-20 gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     <Card3 />
                     <Card3 />
                     <Card3 />
-
                     <Card3 />
                     <Card3 />
                     <Card3 />
                 </div>
+
             </div>
 
             <div>
@@ -114,6 +135,7 @@ function ShopSection() {
                                 img={product.image}
                                 price={product.price}
                                 description={product.description}
+                                star={product.star}
                             />
                         )
                     })}
@@ -139,6 +161,7 @@ function ShopSection() {
                                 img={product.image}
                                 price={product.price}
                                 description={product.description}
+                                star={product.star}
                             />
                         )
                     })}
