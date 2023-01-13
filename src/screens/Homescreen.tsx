@@ -5,6 +5,7 @@ import ShopSection from '../components/ShopSection';
 import Card4 from '../components/Card4';
 import Cart from '../components/Cart';
 import { useSelector } from 'react-redux';
+import Slider from '../components/Caraosel';
 
 
 function Homescreen() {
@@ -15,6 +16,8 @@ function Homescreen() {
     return (
         <div className='relative'>
             <Header />
+            
+
             <Banner />
             <ShopSection />
             <Cart />

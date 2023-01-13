@@ -9,6 +9,7 @@ import { iconDelivery, iconReturn, iconMoney, iconCall } from './Icons';
 
 var arrowLeft = 'absolute top-1/2 w-9 h-9 text-gray-300 left-10 bg-red-700 p-2 rounded-full'
 var arrowRight = 'absolute top-1/2 w-9 h-9 text-gray-300 right-12 bg-red-700 p-2 rounded-full'
+var shopNowClass = 'sm-a text-white w-32 bg-gray-700 rounded-md px-5 py-3 my-5 mx-auto'
 
 function Banner() {
     const [slider, setSlider] = useState({
@@ -55,7 +56,7 @@ function Banner() {
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>THE GOLD STANDARDS OF TELEVISION</h4>
                         <p className='animate-hero-p italic'>Up to 40% off on 4k tv series</p>
-                        <p className='sm-a text-white w-32 bg-gray-700 rounded-md px-5 py-3 my-5'>Shop Now</p>
+                        <p className={shopNowClass}>Shop Now</p>
                     </div>
                 </div>}
 
@@ -66,18 +67,17 @@ function Banner() {
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>YOUR FIRST STEP INTO SMART FITNESS</h4>
                         <p className='animate-hero-p italic'>Up to 20% off smart watches</p>
-                        <p className='sm-a text-white w-32 bg-gray-700 rounded-md px-5 py-3 my-5'>Shop Now</p>
+                        <p className={shopNowClass}>Shop Now</p>
                     </div>
                 </div>}
 
                 {slider.third && <div className={sliderOuter}>
                     <Image className={imageClass} alt='banner-tv' src={home3} />
                     <div className={sliderDiv}>
-                        {/* <div className='absolute right-1/6 top-24'> */}
                         <p className='sm-a font-mono'>Mid week deals</p>
                         <h4 className='animate-hero-h text-2xl my-10'>THE BEST MADE PHONES</h4>
                         <p className='animate-hero-p italic'>Up to 13% off christmas deals</p>
-                        <p className='sm-a text-white w-32 bg-gray-700 rounded-md px-5 py-3 my-5'>Shop Now</p>
+                        <p className={shopNowClass}>Shop Now</p>
                     </div>
                 </div>}
                 {/* <p className='bg-red-400 w-1/8 p-4 mb-4'>Left</p>

@@ -6,36 +6,33 @@ import Image  from 'next/image';
 
 function ImageCard() {
   return (
-      <div className='mx-20 flex gap-2 my-12'>
-          <div className='relative cursor-pointer'>
+      <div className='mx-20 grid md:flex gap-2 my-12'>
+          <div className='relative cursor-pointer sm:w-full md:w-1/2 lg:w-1/3'>
               <Image alt='radio' className='rounded-lg' src={wrist} />
               <div className='absolute top-10 left-52 w-1/8'>
                   <p className='w-2/3 mb-4 bg-gray-200 py-1 text-sm px-2 rounded  text-black'>Gadget Zone</p>
                   <p className='w-1/2 text-black'>UP TO 30% OFF ON GADGETS</p>
               </div>
-                
           </div>
 
-          <div className='relative'>
+          <div className='relative sm:w-full md:w-1/2 lg:w-1/3'>
               <Image alt='radio' className='rounded-lg' src={rad} />
               <div className='absolute top-10 left-52 w-1/8'>
                   <p className='w-2/3 mb-4 bg-gray-200 py-1 text-sm px-2 rounded  text-black'>Gadget Zone</p>
                   <p className='w-1/2 text-white'>UP TO 30% OFF ON GADGETS</p>
               </div>
-
           </div>
 
-          <div className='relative'>
+          <div className='relative sm:w-full md:w-1/2 lg:w-1/3'>
               <Image alt='radio' className='rounded-lg' src={pho} />
               <div className='absolute top-10 left-52 w-1/8'>
                   <p className='w-2/3 mb-4 bg-gray-200 py-1 text-sm px-2 rounded  text-black'>Gadget Zone</p>
                   <p className='w-1/2 text-black'>UP TO 30% OFF ON GADGETS</p>
               </div>
-
           </div>
+      </div>
 
-        
-    </div>
+
   )
 }
 
