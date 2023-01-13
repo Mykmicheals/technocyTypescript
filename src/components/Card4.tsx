@@ -49,7 +49,7 @@ function Card4({ img, category, name, price, id, description, star }) {
                 </div>
                 <p className='text-sm mt-8'>{category}</p>
                 <p className=' my-4 text-sm'>{name.slice(0, 35)}</p>
-                <p className='font-mono text-gray-500 font-bold absolute bottom-16 mt-8'>₦ {price}</p>
+                <p className='font-mono text-gray-500 font-bold  bottom-16 mt-8'>₦ {price}</p>
             </Link>
 
             {showCartBtn ? <button onClick={addToCart({ name: name, price: price, image: img, id: id, qty: 1 })} className=' bg-red-600 px-5 py-2 text-white my-2 rounded text-sm font-serif absolute bottom-1'>Add to cart</button> : null}
