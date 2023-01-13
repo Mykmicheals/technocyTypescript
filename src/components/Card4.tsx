@@ -45,7 +45,7 @@ function Card4({ img, category, name, price, id, description, star }) {
                 {Array.from({ length: 5 - star }, (_, i) => (
                     <span key={i}>☆</span>
                 ))}
-                <p className='font-mono text-gray-500 font-bold absolute bottom-12'>₦ {price}</p>
+                <p className='font-mono text-gray-500 font-bold mt-4 bottom-12'>₦ {price}</p>
             </Link>
 
             {showCartBtn ? <button onClick={addToCart({ name: name, price: price, image: img, id: id, qty: 1 })} className=' bg-red-600 px-5 py-2 text-white my-2 rounded text-sm font-serif absolute bottom-1'>Add to cart</button> : null}
