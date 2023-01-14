@@ -33,7 +33,7 @@ function Index() {
 
         <div className='px-4 lg:px-10 bg-gray-300 '>
 
-            <div className='my-20 pt-10  flex lg:gap-16'>
+            <div className='my-20 pt-10 flex lg:gap-16'>
 
 
                 <div className='w-1/4 bg-white px-10 pt-10 hidden lg:block'>
