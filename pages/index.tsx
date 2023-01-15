@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import { Fragment, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { productActions } from '../src/store/index';
+import Footer from '../src/components/Footer';
 
 async function getData() {
   const res = await fetch('http://127.0.0.1:8000/popular_products');
@@ -26,11 +27,11 @@ export default function Home(data: []) {
 
   return (
     <Fragment>
-      <div>
+      <div className=''>
 
         <Homescreen />
       </div>
-
+    {/* <Footer /> */}
     </Fragment>
   )
 }

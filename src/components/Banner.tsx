@@ -4,7 +4,7 @@ import bannerTv from '../../public/images/tv.png'
 import home2 from '../../public/images/home2.png'
 import home3 from '../../public/images/home3.png'
 
-import DoubleP from './DoubleP'
+//import DoubleP from './DoubleP'
 import { iconDelivery, iconReturn, iconMoney, iconCall } from './Icons';
 
 var arrowLeft = 'absolute top-1/2 w-9 h-9 text-gray-300 left-10 bg-red-700 p-2 rounded-full'
@@ -89,13 +89,13 @@ function Banner() {
 
 
 
-            <div className='mx-20 my-10 flex flex-wrap gap-24'>
+            {/* <div className='mx-20 my-10 flex flex-wrap gap-24'>
                 <DoubleP icon={iconDelivery} header='Free delivery' paragraph='Free shipping over $100' />
                 <DoubleP icon={iconReturn} header='Free Return' paragraph='Free return over $100' />
                 <DoubleP icon={iconCall} header='Customer Support' paragraph='Friendly 24/7 customer support' />
                 <DoubleP icon={iconMoney} header='Money Back guarantee' paragraph='Free shipping over $100' />
 
-            </div>
+            </div> */}
         </div>
     )
 }

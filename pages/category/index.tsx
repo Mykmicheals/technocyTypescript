@@ -21,13 +21,19 @@ function Category() {
     const router = useRouter()
     const detail = router.query
 
-
+   
 
     const products: any = useSelector((state: productState) => state?.products.products.data)
-    const phones = products?.filter((product) => product.category === detail.Heading)
+    const phones = products?.filter((product) => product.category === detail.id)
     const paginate1 = phones?.slice(0, 6)
 
-    const [currPage, setPage] = useState(paginate1)
+    const filteredItems = products.filter((item) =>
+        item.name.toLowerCase().includes(detail.id) || item.category.toLowerCase().includes(detail.id)
+    );
+
+    console.log(detail.search)
+    
+    const [currPage, setPage] = useState(detail.search?filteredItems:paginate1)
 
     return (
         <Fragment>
@@ -96,7 +102,7 @@ function Category() {
 
                 <div className='lg:w-3/4 mx-auto py-10'>
                     <div className={sectionClass}>
-                        {currPage?.map((product) => {
+                        {currPage.map((product) => {
                             return (
                                 <Card4
                                     id={product.id}
@@ -111,7 +117,7 @@ function Category() {
                         })}
                     </div>
                     <div className='mx-auto mt-28 text-center  '>
-                         <button className={paginatebtn}>1</button>
+                        <button className={paginatebtn}>1</button>
                         <button onClick={() => {
                             setPage(phones?.slice(0, 7))
                             window.scrollTo({
@@ -119,7 +125,7 @@ function Category() {
                                 behavior: "smooth"
                             });
                         }} className={paginatebtn}>2</button>
-                       
+
                         <button className={paginatebtn}>3</button>
 
                     </div>

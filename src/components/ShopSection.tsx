@@ -17,7 +17,7 @@ interface productState {
         products: {
             data: any
         }
-    }
+        }
 }
 
 function ShopSection() {
@@ -25,7 +25,7 @@ function ShopSection() {
     var featured = products?.slice(8, 13)
     const phones = products?.filter((product) => product.category === 'Phones').slice(0, 5)
     const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 5)
-    const tv = products?.filter((product) => product.category === 'Television').slice(0, 5)
+    const tv = products?.filter((product) => product.category === 'Televisions').slice(0, 5)
 
 
 
@@ -36,35 +36,36 @@ function ShopSection() {
 
     return (
         <div className='bg-gray-100 '>
-            {/* <div className='flex flex-wrap lg:mx-20 pt-10 py-5 grid grid-cols-2 lg:grid-cols-4 gap-2'> */}
-            <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >
-                <DealCard />
-                <Card4
-                    key='762'
-                    id='762'
-                    name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
-                    category='Iphone'
-                    img={iphone}
-                    price='580,000'
-                    description='good products'
-                    star='5'
-                /> 
+          
+            <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >   
+               <DealCard />           
+                    <Card4
+                        key='762'
+                        id='762'
+                        name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
+                        category='Iphone'
+                        img={iphone}
+                        price='580,000'
+                        description='good products'
+                        star='5'
+                    />
 
-                <Card4
-                    key='762'
-                    id='762'
-                    name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
-                    category='Iphone'
-                    img={iphone}
-                    price='580,000'
-                    description='good products'
-                    star='5'
-                /> 
-
+                    <Card4
+                        key='762'
+                        id='762'
+                        name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
+                        category='Iphone'
+                        img={iphone}
+                        price='580,000'
+                        description='good products'
+                        star='5'
+                    />  
             </div>
+            
             <div>
                 <SectionHead
-                    Heading='FEATURED PRODUCTS'
+                    id='FEATURED PRODUCTS'
+                    
                 />
                 <div className={sectionClass}>
                     {featured?.map((product) => {
@@ -88,7 +89,8 @@ function ShopSection() {
 
             <div>
                 <SectionHead
-                    Heading='Phones'
+                    id='Phones'
+                    
                 />
                 <div className={sectionClass}>
                     {phones?.map((product) => {
@@ -109,7 +111,7 @@ function ShopSection() {
 
             <div className=''>
                 <SectionHead
-                    Heading='NEW ARRIVALS'
+                    id='NEW ARRIVALS'
                 />
                 <div className="mx-20 gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
                     <Card3 />
@@ -124,7 +126,7 @@ function ShopSection() {
 
             <div>
                 <SectionHead
-                    Heading='Laptops'
+                    id='Laptops'
                 />
                 <div className={sectionClass}>
                     {laptops?.map((product) => {
@@ -150,7 +152,7 @@ function ShopSection() {
 
             <div>
                 <SectionHead
-                    Heading='Televisions'
+                    id='Televisions'
                 />
                 <div className={sectionClass}>
                     {tv?.map((product) => {
@@ -172,7 +174,7 @@ function ShopSection() {
 
             <div>
                 <SectionHead
-                    Heading='Top Selling Items'
+                    id='Top Selling Items'
                 />
                 {/* <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
 

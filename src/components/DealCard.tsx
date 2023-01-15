@@ -6,9 +6,9 @@ var timeClass = 'bg-red-600 p-3 m-1 rounded text-white'
 
 function DealCard() {
     return (
-        <div className='relative w-1/2 h-44'>
-            <div className='h-60'>
-                <Image className='rounded-md h-112 w-full' src={game} alt='game' />
+        <div className='relative col-span-2  h-44'>
+            <div className=''>
+                <Image className='rounded-md h-112` w-full' src={game} alt='game' />
             </div>
            
             <div className='absolute top-32 left-10'>
