@@ -6,6 +6,7 @@ import { Fragment, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { productActions } from '../src/store/index';
 import Footer from '../src/components/Footer';
+import { serverHost } from '../src/components/Card4';
 
 
 
@@ -30,7 +31,7 @@ export default function Home(data: []) {
 
 
 export async function getServerSideProps() {
-  const res = await fetch('http://127.0.0.1:8000/popular_products');
+  const res = await fetch(`${serverHost}/popular_products`);
   const data = await res.json()
   return { props: { data } }
 }
