@@ -27,7 +27,7 @@ function Category() {
     const phones = products?.filter((product) => product.category === detail.id)
     const paginate1 = phones?.slice(0, 6)
 
-    const filteredItems = products.filter((item) =>
+    const filteredItems = products?.filter((item) =>
         item.name.toLowerCase().includes(detail.id) || item.category.toLowerCase().includes(detail.id)
     );
 
