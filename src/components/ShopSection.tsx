@@ -96,6 +96,7 @@ function ShopSection() {
                     {phones?.map((product) => {
                         return (
                             <Card4
+                                key={product.id}
                                 id={product.id}
                                 name={product.name}
                                 category={product.category}
@@ -133,6 +134,7 @@ function ShopSection() {
 
                         return (
                             <Card4
+                                key={product.id}
                                 id={product.id}
                                 name={product.name}
                                 category={product.category}
@@ -160,6 +162,7 @@ function ShopSection() {
                         return (
                             <Card4
                                 id={product.id}
+                                key={product.id}
                                 name={product.name}
                                 category={product.category}
                                 img={product.image}
