@@ -106,6 +106,7 @@ function Category() {
                             return (
                                 <Card4
                                     id={product.id}
+                                    key = {product.id}
                                     name={product.name}
                                     category={product.category}
                                     img={product.image}
