@@ -7,14 +7,6 @@ import { useDispatch } from 'react-redux';
 import { productActions } from '../src/store/index';
 import Footer from '../src/components/Footer';
 
-async function getData() {
-  const res = await fetch('http://127.0.0.1:8000/popular_products');
-  const data = await res.json()
-  return data
-
-
-}
-
 
 
 export default function Home(data: []) {
