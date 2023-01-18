@@ -102,7 +102,7 @@ function Category() {
 
                 <div className='lg:w-3/4 mx-auto py-10'>
                     <div className={sectionClass}>
-                        {currPage.map((product) => {
+                        {currPage?.map((product) => {
                             return (
                                 <Card4
                                     id={product.id}
