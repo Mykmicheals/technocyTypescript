@@ -6,23 +6,20 @@ import Speaker from '../../public/images/speaker1.jpg'
 import { cartActions, cartStore } from '../store/index';
 import { serverHost } from './Card4';
 import { PaystackButton } from 'react-paystack'
+import Link from 'next/link';
 
 
 function Cart() {
 
     let circleRed: HTMLDivElement | null = null
     const dispatch = useDispatch()
-
-
-
-    //   const cart = useSelector((state) => state.cart)
     const cart = useSelector(cartStore)
 
     const config = {
         reference: (new Date()).getTime().toString(),
         email: "user@example.com",
         amount: 20000,
-        publicKey: 'pk_test_dd72b6820442e9ed1ecfd39205ef69cd773adcca',
+        publicKey: 'xxxxxxxxxxxxxxxxxxxxxxxx',
     }
 
     const componentProps = {
@@ -66,9 +63,12 @@ function Cart() {
                     </div>
                     <div className=''>
                         <p className='flex justify-center items-center mt-5 px-4 py-3 rounded font-bold text-sm bg-gray-100 w-4/5 mx-10 cursor-pointer hover:bg-gray-200'>VIEW CART</p>
-                        <p className='flex justify-center items-center mt-2 px-4 py-3 rounded text-white font-bold text-sm bg-red-400 w-4/5 mx-10 hover:bg-red-500'>
-                            Checkout
-                        </p>
+                        <Link href='/payment'>
+                            <p className='flex justify-center items-center mt-2 px-4 py-3 rounded text-white font-bold text-sm bg-red-400 w-4/5 mx-10 hover:bg-red-500'>
+                                Checkout
+                            </p>
+                        </Link>
+
 
                         <PaystackButton className="btn" {...componentProps} />
 
