@@ -4,9 +4,12 @@ import Header from '../../src/components/Header'
 import Image from 'next/image'
 import { useSelector } from 'react-redux';
 import Card4 from '../../src/components/Card4';
+import { serverHost } from '../../src/components/Card4';
 
-var serverHost = 'http://127.0.0.1:8000/'
+
 var listClass = 'mb-6 font-mono hover:text-red-500 cursor-pointer capitalize'
+
+
 
 interface productState {
     products: {
