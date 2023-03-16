@@ -110,7 +110,7 @@ function ShopSection() {
                 </div>
             </div>
 
-            <div className=''>
+            {/* <div className=''>
                 <SectionHead
                     id='NEW ARRIVALS'
                 />
@@ -123,7 +123,7 @@ function ShopSection() {
                     <Card3 />
                 </div>
 
-            </div>
+            </div> */}
 
             <div>
                 <SectionHead

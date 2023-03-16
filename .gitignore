@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 
+g.py
 .env
 # testing
 /coverage
