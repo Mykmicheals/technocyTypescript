@@ -32,11 +32,11 @@ function Header() {
                 <div className='mx-20 md:flex gap-20 lg:col-span-5'>
                     <Image alt='logo' src={logo} />
                     <div className='flex gap-20 ml-24'>
-                        <div className=''>
+                        <div className='hidden md:block'>
                             <p>Send us a message</p>
                             <p>support.technocy@example.com</p>
                         </div>
-                        <div>
+                        <div className='hidden md:block'>
                             <p>Need Help, call us</p>
                             <p>+84 2500 888 33</p>
                         </div>
