@@ -28,10 +28,10 @@ function Header() {
     var listClass = 'hover:text-red-600 font-mono mb-12 text-xl'
     return (
         <div className='relative'>
-            <div className='py-10 grid xl:grid grid-cols-6  border-b-2 border-gray-300'>
-                <div className='mx-20  md:flex gap-20 col-span-5'>
+            <div className='py-10 grid grid-cols-5 lg:grid-cols-6  border-b-2 border-gray-300'>
+                <div className='mx-20 md:flex gap-20 lg:col-span-5'>
                     <Image alt='logo' src={logo} />
-                    <div className='hidden md:visible flex gap-20'>
+                    <div className='flex gap-20 ml-24'>
                         <div className=''>
                             <p>Send us a message</p>
                             <p>support.technocy@example.com</p>
