@@ -25,7 +25,7 @@ function ShopSection() {
     var featured = products?.slice(8, 13)
     const phones = products?.filter((product) => product.category === 'Phones').slice(0, 5)
     const laptops = products?.filter((product) => product.category === 'Laptops').slice(0, 5)
-    const tv = products?.filter((product) => product.category === 'Televisions').slice(0, 5)
+    const tv = products?.filter((product) => product.category === 'Television').slice(0, 5)
 
 
 
@@ -37,7 +37,7 @@ function ShopSection() {
     return (
         <div className='bg-gray-100 '>
           
-            <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >   
+            {/* <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >   
                <DealCard />           
                     <Card4
                         key='762'
@@ -60,7 +60,7 @@ function ShopSection() {
                         description='good products'
                         star='5'
                     />  
-            </div>
+            </div> */}
             
             <div>
                 <SectionHead
@@ -174,21 +174,6 @@ function ShopSection() {
                     })}
                 </div>
             </div>
-
-            <div>
-                <SectionHead
-                    id='Top Selling Items'
-                />
-                {/* <div className='flex flex-wrap justify-center gap-2 mb-10 lg:mx-20'>
-
-                    <Card4 />
-                    <Card4 />
-                    <Card4 />
-                    <Card4 />
-                </div> */}
-            </div>
-
-
 
         </div>
 
