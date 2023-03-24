@@ -17,7 +17,7 @@ interface productState {
         products: {
             data: any
         }
-        }
+    }
 }
 
 function ShopSection() {
@@ -29,43 +29,20 @@ function ShopSection() {
 
 
 
-  //  var sectionClass = 'flex justify-center gap-1 mb-10 lg:mx-8'
-    var sectionClass = 'grid mx-4 md:mx-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2'
+    //  var sectionClass = 'flex justify-center gap-1 mb-10 lg:mx-8'
+    var sectionClass = 'grid mx-4 md:mx-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 my-8'
 
-    
+
 
     return (
-        <div className='bg-gray-100 '>
-          
-            {/* <div className='flex gap-1 flex-wrap mb-5 pt-10 justify-center' >   
-               <DealCard />           
-                    <Card4
-                        key='762'
-                        id='762'
-                        name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
-                        category='Iphone'
-                        img={iphone}
-                        price='580,000'
-                        description='good products'
-                        star='5'
-                    />
+        <div className='bg-gray-100 my-0 py-10'>
 
-                    <Card4
-                        key='762'
-                        id='762'
-                        name='Apple IPhone 13 6.1" , (4GB RAM + 128GB ROM), IOS 15 - Midnight'
-                        category='Iphone'
-                        img={iphone}
-                        price='580,000'
-                        description='good products'
-                        star='5'
-                    />  
-            </div> */}
-            
+       
+
             <div>
                 <SectionHead
                     id='FEATURED PRODUCTS'
-                    
+
                 />
                 <div className={sectionClass}>
                     {featured?.map((product) => {
@@ -90,7 +67,7 @@ function ShopSection() {
             <div>
                 <SectionHead
                     id='Phones'
-                    
+
                 />
                 <div className={sectionClass}>
                     {phones?.map((product) => {

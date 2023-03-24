@@ -6,7 +6,7 @@ import Image  from 'next/image';
 
 function ImageCard() {
   return (
-      <div className='mx-20 grid md:flex gap-2 my-12'>
+      <div className='mx-20 grid md:flex md:flex-wrap align-center my-12'>
           <div className='relative cursor-pointer sm:w-full md:w-1/2 lg:w-1/3'>
               <Image alt='radio' className='rounded-lg' src={wrist} />
               <div className='absolute top-10 left-52 w-1/8'>

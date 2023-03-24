@@ -6,9 +6,6 @@ import { cartActions } from '../store/index';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 
-
-//export var serverHost = 'http://127.0.0.1:8000/'
-
 export var serverHost = 'https://technocy.pythonanywhere.com/'
 
 function Card4({ img, category, name, price, id, description, star }) {
