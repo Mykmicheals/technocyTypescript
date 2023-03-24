@@ -9,9 +9,6 @@ import SectionHead from './SectionHead';
 import { useSelector } from 'react-redux';
 import { productsStore } from '../store';
 
-import iphone from '../../public/images/iphone13.jpg'
-import mcbook from '../../public/images/mcbook.jpg'
-
 interface productState {
     products: {
         products: {
