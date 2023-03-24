@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import logo from '../../public/images/logo.svg'
 import { useRouter } from "next/router";
+import Link from 'next/link';
+
 
 
 
@@ -15,14 +17,14 @@ function Header() {
 
         router.push({
             pathname: '/category',
-            query: { id: searchInput.toLowerCase(),'search':true }
+            query: { id: searchInput.toLowerCase(), 'search': true }
         });
         setInput('')
     }
 
-    function handleInputChange(e){
+    function handleInputChange(e) {
         setInput(e.target.value)
-       
+
     }
 
     var listClass = 'hover:text-red-600 font-mono mb-12 text-xl'
@@ -30,7 +32,10 @@ function Header() {
         <div className='relative'>
             <div className='py-10 grid grid-cols-5 lg:grid-cols-6  border-b-2 border-gray-300'>
                 <div className='mx-20 md:flex gap-20 lg:col-span-5'>
-                    <Image alt='logo' src={logo} />
+                    <Link href='/'>
+                        <Image alt='logo' src={logo} />
+
+                    </Link>
                     <div className='flex gap-20 ml-24'>
                         <div className='hidden md:block'>
                             <p>Send us a message</p>
