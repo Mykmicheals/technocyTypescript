@@ -60,28 +60,28 @@ You will also see any lint errors in the console.
 
 ## The HomePage
 
-<img width="1678" alt="homescreen" src="https://github.com/Mykmicheals/yoke/assets/88559940/7a55e3e7-471c-4cbe-b9fc-3a0431011211">
+<img width="1677" alt="Screen Shot 2023-05-15 at 1 20 38 PM" src="https://github.com/Mykmicheals/technocyTypescript/assets/88559940/c2d578a5-81b9-4d6d-8a7b-6f755780b614">
+
+
+### The carousel Page
+
+
+<img width="1677" alt="Screen Shot 2023-05-15 at 2 03 43 PM" src="https://github.com/Mykmicheals/technocyTypescript/assets/88559940/aff32f17-02e0-40a2-9a98-cc15128ab9ff">
 
 
 
-### The Modal Page
-
-<img width="1678" alt="modalhome" src="https://github.com/Mykmicheals/yoke/assets/88559940/b78d81e3-48d3-4b0d-83ff-176f538e144e">
-
-
-### The Mobile View
-
-
-<img width="499" alt="mobile" src="https://github.com/Mykmicheals/yoke/assets/88559940/c3037297-6847-4c80-8953-a488b7cbc197">
-
-
-### The Mobile Sidebar View
-
-<img width="499" alt="sidebar" src="https://github.com/Mykmicheals/yoke/assets/88559940/c359fadf-fa19-40ee-96a9-5188186b9693">
+### The Category Page
+<img width="1677" alt="Screen Shot 2023-05-15 at 1 23 44 PM" src="https://github.com/Mykmicheals/technocyTypescript/assets/88559940/b52c4af4-b927-4de4-acd2-84ac62dce878">
 
 
 
-## The Redex store
+### The Detail Page View
+
+<img width="1677" alt="Screen Shot 2023-05-15 at 2 06 05 PM" src="https://github.com/Mykmicheals/technocyTypescript/assets/88559940/595d2aae-dc68-4bbe-a978-b25a0fcc0719">
+
+
+
+## The Redux store
 
 
 ```
