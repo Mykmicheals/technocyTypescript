@@ -40,7 +40,7 @@ function Category() {
             <div className='my-20 pt-10 flex md:gap-0 lg:gap-4 bg-gray-300 lg:px-10'>
                 <div className='lg:w-1/4 '>
 
-                    <div className='bg-white px-10 pt-10 hidden lg:block'>
+                    <div className='bg-white px-10 py-10 hidden lg:block'>
                         <h2 className='font-bold mb-10 text-xl'>Product Categories</h2>
                         <ul>
 
